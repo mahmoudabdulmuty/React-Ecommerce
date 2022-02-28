@@ -8,7 +8,7 @@ const MenuItem = ({ imageUrl, title, size }) => {
 				style={{ backgroundImage: `url(${imageUrl})` }}
 			></div>
 			<div className="content">
-				<div className="title">{title}</div>
+				<span className="title">{title}</span>
 				<span className="subtitle">SHOP NOW</span>
 			</div>
 		</div>
