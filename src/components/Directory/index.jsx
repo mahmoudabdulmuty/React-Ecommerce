@@ -23,25 +23,23 @@ const Directory = () => {
 			linkUrl: 'shop/sneakers'
 		},
 		{
-			title: 'womens',
-			imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
-			size: 'large',
+			title: 'Jeans',
+			imageUrl: 'https://i.imgur.com/81ZWA8H.jpg',
 			id: 4,
-			linkUrl: 'shop/womens'
+			linkUrl: 'shop/jeans'
 		},
 		{
-			title: 'mens',
-			imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
-			size: 'large',
+			title: 'Hoodies',
+			imageUrl: 'https://i.imgur.com/S2QWYTe.jpeg',
 			id: 5,
-			linkUrl: 'shop/mens'
+			linkUrl: 'shop/hoodies'
 		}
 	]);
 
 	return (
 		<div className="directory-menu">
-			{data.map(({ title, imageUrl, id, size }) => (
-				<MenuItem key={id} imageUrl={imageUrl} title={title} size={size} />
+			{data.map(({ title, imageUrl, id }) => (
+				<MenuItem key={id} imageUrl={imageUrl} title={title} />
 			))}
 		</div>
 	);

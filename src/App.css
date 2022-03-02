@@ -6,3 +6,16 @@
 	box-sizing: border-box;
 	font-family: 'Open Sans Condensed', sans-serif;
 }
+
+body {
+	padding: 15px 60px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
