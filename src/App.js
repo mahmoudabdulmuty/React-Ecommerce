@@ -1,43 +1,43 @@
-import { Component } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import Navbar from './components/Navbar';
-import { auth } from './firebase/firebaseConfig';
-import Home from './pages/Home';
-import Shop from './pages/Shop';
-import SignInAndSignUp from './pages/SignInAndSignUp';
-
-class App extends Component {
-  state = {
-    currentUser: null,
-  };
-
-  unsubscribeFromAuth = null;
-
-  componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged((user) => {
-      this.setState({
-        currentUser: user,
-      });
-    });
-  }
-
-  componentWillUnmount() {
-    this.unsubscribeFromAuth = null;
-  }
-
-  render() {
-    return (
-      <>
-        <Navbar currentUser={this.state.currentUser} />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='shop' element={<Shop />} />
-          <Route path='login' element={<SignInAndSignUp />} />
-        </Routes>
-      </>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div className='categories-container'>
+      <div className='category-container'>
+        {/* <img /> */}
+        <div className='category-body-container'>
+          <h2>Hats</h2>
+          <p>Shop Now</p>
+        </div>
+      </div>
+      <div className='category-container'>
+        {/* <img /> */}
+        <div className='category-body-container'>
+          <h2>Jackets</h2>
+          <p>Shop Now</p>
+        </div>
+      </div>
+      <div className='category-container'>
+        {/* <img /> */}
+        <div className='category-body-container'>
+          <h2>Sneakers</h2>
+          <p>Shop Now</p>
+        </div>
+      </div>
+      <div className='category-container'>
+        {/* <img /> */}
+        <div className='category-body-container'>
+          <h2>Womens</h2>
+          <p>Shop Now</p>
+        </div>
+      </div>
+      <div className='category-container'>
+        {/* <img /> */}
+        <div className='category-body-container'>
+          <h2>Mens</h2>
+          <p>Shop Now</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default App;
